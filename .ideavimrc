@@ -12,7 +12,7 @@ set colorscheme desert
 augroup SnakeCase
   autocmd!
   " by FileType
-  autocmd FileType python,c,cpp,cs,javascript,typescript,typescriptreact,json,html,css,ruby,lua,razor,cshtml setlocal iskeyword-=_
+  autocmd FileType python,c,cpp,cs,javascript,typescript,typescriptreact,json,html,css,ruby,lua,razor,cshtml,yaml setlocal iskeyword-=_
   " for extensions that don’t have their own FileType or use xml (csproj, props, targets)
   autocmd BufRead,BufNewFile *.csproj,*.props,*.targets setlocal iskeyword-=_
 augroup END
