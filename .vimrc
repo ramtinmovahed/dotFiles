@@ -8,6 +8,16 @@ set smartindent
 set colorscheme desert
 
 
+" treat underscore as a word-separator in most programming files
+augroup SnakeCase
+  autocmd!
+  " by FileType
+  autocmd FileType python,c,cpp,cs,javascript,typescript,typescriptreact,json,html,css,ruby,lua,razor,cshtml setlocal iskeyword-=_
+  " for extensions that don’t have their own FileType or use xml (csproj, props, targets)
+  autocmd BufRead,BufNewFile *.csproj,*.props,*.targets setlocal iskeyword-=_
+augroup END
+
+
 " Colemak DH layout remappings for Vim
 " This maps QWERTY positions to Colemak DH keys
 
